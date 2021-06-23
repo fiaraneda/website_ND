@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Destino</title>
+    <link rel="stylesheet" href="css/NuevoDestino_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Logo Encabezado -->
+    <header>
+        <div id="div-logo">
+            <img src="img/logo.png" id="logo-nuevo-destino" alt="">
+        </div>
+    </header>
+    <!-- Menú Navegador -->
+    <nav>
+        <div id="div-menu">
+            <ul id="menu">
+                <ul class="nav">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="hoteles.html">Hoteles</a></li>
+                    <li><a href="transporte.html">Transporte</a></li>
+                    <li><a href="cruceros.html">Cruceros</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="chile.html">Conoce Chile</a></li>
+                </ul>
+        </div>
+    </nav>
+    <!-- Contenido Pagina -->
+    <main class="contenedor">
+        <!-- Secciones Pagina-->
+        <div class="div-secciones">
+            <!-- Secciòn Busqueda -->
+            <section id="seccion-busqueda">
+                <div id="div-buscador">
+                    <form id="formulario-busqueda">
+                        <div id="div-destino">
+                            <input type="text" maxlength="20" class="input-destino" placeholder="Ingrese Origen" id="origen" autofocus autocomplete="off" onchange="validaOrigen()" required>
+                            <input type="text" maxlength="20" class="input-destino" placeholder="Ingrese Destino" id="destino" autocomplete="off" onchange="validaDestino()" required>
+                            <input type="text" maxlength="10" class="input-destino" id="desde" placeholder="DD/MM/AAAA" autocomplete="off" onchange="validaFechaDesde()" required>
+                            <input type="text" maxlength="10" class="input-destino" id="hasta" placeholder="DD/MM/AAAA" autocomplete="off" onchange="validaFechaHasta()" required>
+                            <input type="text" maxlength="2" class="input-destino" placeholder="Cantidad Pasajeros" id="cantidad" autocomplete="off" pattern="[0-9]+" required>
+                            <button type="submit" class="input-destino" onclick="buscaFormulario()">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- Secciòn Ofertas -->
+            <section id="seccion-ofertas">
+                <div id="div-titulo">
+                    <h1>OFERTAS</h1>
+                </div>
+                <div id="div-sale">
+                    <a href=""><img src="img/fondo-sale.png" id="fondo-ofertas" alt=""></a>
+                </div>
+                <!-- Menú Ofertas-->
+                <div id="div-sale-menu">
+                    <a href=""><video src="media/media-bahiaibe.mp4" id="oferta" autoplay loop></video></a>
+                    <a href=""><video src="media/media-bahiaibe.mp4" id="oferta" autoplay loop></video></a>
+                    <a href=""><video src="media/media-bahiaibe.mp4" id="oferta" autoplay loop></video></a>
+                    <a href=""><video src="media/media-bahiaibe.mp4" id="oferta" autoplay loop></video></a>
+                    <a href=""><video src="media/media-bahiaibe.mp4" id="oferta" autoplay loop></video></a>
+                </div>
+            </section>
+            <!-- Secciòn Pasajeros -->
+            <section id="seccion-pasajeros">
+                <div id="div-titulo">
+                    <h1>NUESTROS PASAJEROS</h1>
+                </div>
+                <div id="div-pasajeros">
+                    <img id="pasajero" src="img/1_pasajero.jpg" alt="">
+                    <img id="pasajero" src="img/2_pasajero.jpg" alt="">
+                    <img id="pasajero" src="img/3_pasajero.jpg" alt="">
+                    <img id="pasajero" src="img/4_pasajero.jpg" alt="">
+                </div>
+            </section>
+            <!-- Secciòn Partners -->
+            <section id="seccion-alianzas">
+                <div id="div-titulo">
+                    <h1>ALIANZAS</h1>
+                </div>
+                <div id="div-alianzas">
+                    <a href="https://www.assistcard.com/cl"><img id="alianzas" src="img/1_alianzas.jpg" alt=""></a>
+                    <a href="https://www.panamericanaturismo.cl/"><img id="alianzas" src="img/2_alianzas.jpg" alt=""></a>
+                    <a href="https://www.united.com/es/us"><img id="alianzas" src="img/3_alianzas.jpg" alt=""></a>
+                    <a href="https://www.aa.com/homePage.do?locale=es_MX"><img id="alianzas" src="img/4_alianzas.jpg" alt=""></a>                
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <main class="contenedor-suscripcion">
+            <div id="div-logo-pie">
+                <a href="actividades.html"><img id="logo-pie" src="img/logo.png" alt=""></a>
+            </div>
+            <div class="formulario-suscripcion">
+                <form class="suscripcion" id="form" name="miformaulario">
+                    <div id="div-titulo">
+                        <h1>CONTACTO</h1>
+                    </div>
+                    <div>
+                        <input type="text" maxlength="20" onchange="validaNombre()" class="input-box-nombre" placeholder="Ingresa tu Nombre " id="nombre" autocomplete="off" required>
+                    </div>
+                    <input type="text" maxlength="20" onchange="validaPaterno()" class="input-box" placeholder="Apellido Paterno" id="paterno"  autocomplete="off" required>
+                    <input type="text" maxlength="20" onchange="validaMaterno()" class="input-box" placeholder="Apellido Materno" id="materno"  autocomplete="off" required>
+                    <input type="email" onchange="validaCorreo()" class="input-box" placeholder="Email" id="email" autocomplete="off" required>
+                    <input type="tel" onchange="validaTelefono()" class="input-box" placeholder="Teléfono" id="telefono" autocomplete="off" required>
+                    <div>
+                        <input type="text" class="input-box-direccion" placeholder="Dirección " id="direccion" autocomplete="off">
+                    </div>
+                    <div class="boton">
+                        <input type="submit" class="boton-enviar" onclick="guardaFormulario()" value="Envía Información"></input>
+                    </div>
+                </form>
+            </div>
+            <div id="div-logo-redes">
+                <a href="https://www.facebook.com/Nuevodestino.cl"><img id="logo-redes"src="img/1_redes.png"></a>
+                <a href="https://www.instagram.com/nuevodestinoscl/"><img id="logo-redes"src="img/2_redes.png"></a>
+                <a href="https://www.facebook.com/Nuevodestino.cl"><img id="logo-redes"src="img/3_redes.png"></a>
+            </div>
+        </main>
+        <div id="div-firma">
+            <h6 class="copy">Diseñado y Desarrollador por <a href="https://www.linkedin.com/in/felipe-araneda-flores/" target="_blank">Felipe Araneda Flores. / CEO-Founder • Nuevo Destino</a> - Copyright 2021.</h6>
+        </div>
+    </footer>
+</body>
+
+</html>
